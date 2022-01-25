@@ -5,23 +5,57 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Code Quiz</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 	<header>
-		<button class="btn" id="view-highscores"> view high scores</button>
-    <h2 id="timer">Time: 75</h2>
+		<button class="score-btn" id="view-highscores"> view high scores</button>
+    <h2 id="timer">Time: 0.</h2>
  </header>
 	<main class="page-content" id="page-content">
-    <div class="form-group">
+    <div id="start-page">
 		<h1 class="page-title">Coding Quiz Challenge</h1>
 		<h2>Try to answer the following code-related questions within the time limit. 
     <br>Keep in mind that incorrect answers will penalize your score/time by ten seconds!
 		</h2>
-		<button class="btn" id="start-quiz">Start Quiz</button>
+		<button class="start-btn" id="start-quiz">Start Quiz</button>
     </div>
-	</main>
+
+  <div id="quiz-page">
+    <h1 id="question">Question</h1>
+    <div id="answer-container">
+      <button class="btn">Answer 1</button>
+      <button class="btn">Answer 2</button>
+      <button class="btn">Answer 3</button>
+      <button class="btn">Answer 4</button>
+    </div>
+
+  </div>
+
+  <div id="finish-page">
+    <h1>All done!</h1>
+    <h2>Your final score is 0.</h2>
+    <form id="submission-form">
+        <h2>Enter initials:</h2>
+        <input type="text" name="initials" placeholder="Initials" />
+        <button class="btn" id="submit-score" type="submit">Submit</button>
+      </form>
+    
+  </div>
+
+  <div id="scoreboard-page">
+    <h1>High Scores</h1>
+     <div id="scoreboard-container">
+
+      </div>
+      <div id="scoreboard-button-container">
+        <button class="btn" id="back">Go back</button>
+        <button class="btn" id="clear">Clear high scores</button>
+      </div>
+  </div>
+    
+</main>
         <script src="script.js"></script>
   </body>
 </html>
